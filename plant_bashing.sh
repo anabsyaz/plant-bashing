@@ -1,10 +1,11 @@
 #!/bin/bash
 echo "Welcome to THE GAME"
+
 echo "What is your name?"
 read player_name
 echo "Nice to meet you, $player_name"
-read -p "Would you like to plant a new seed? (yes/no): " answer
 
+read -p "Would you like to plant a new seed? (yes/no): " answer
 if [[ "$answer" == "yes" ]]; then
     echo "You dug a hole and planted a small seed the size of an olive."
 elif [[ "$answer" == "no" ]]; then
@@ -28,4 +29,3 @@ elif [[ "$waitchoice" == "yes" ]]; then
     echo "Waiting 60 seconds (1 day)..."
     sleep 60
     echo "Your seed has germinated overnight!"
-    echo balls
