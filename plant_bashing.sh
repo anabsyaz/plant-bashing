@@ -3,14 +3,29 @@ echo "Welcome to THE GAME"
 echo "What is your name?"
 read player_name
 echo "Nice to meet you, $player_name"
-echo would you like to plant a seed? yes/no
-read answer 
-if [[ "$answer" == "yes" ]];
-	then echo "You dug a hole and planted a small seed the size of a olive"
-if [["$answer"=="no"]];
-	then echo thank you for playing;
-	sleep 4;
-	exit;
-echo "In your computers world time moves
- much faster then real life for example 1 second is 1 minuite in the game
- and 1 minuite in real life is 1 hour in reality"
+read -p "Would you like to plant a new seed? (yes/no): " answer
+
+if [[ "$answer" == "yes" ]]; then
+    echo "You dug a hole and planted a small seed the size of an olive."
+elif [[ "$answer" == "no" ]]; then
+    echo "Thank you for playing."
+    sleep 4
+    exit
+else
+    echo "Invalid choice. Exiting..."
+    exit
+fi
+
+echo "In your computer’s world, time moves much faster than in real life."
+echo "For example, 1 minute is equal to 1 day."
+
+read -p "Would you like to wait for your seed to grow? (yes/no): " waitchoice
+
+if [[ "$waitchoice" == "no" ]]; then
+    echo "Goodbye!"
+    exit
+elif [[ "$waitchoice" == "yes" ]]; then
+    echo "Waiting 60 seconds (1 day)..."
+    sleep 60
+    echo "Your seed has germinated overnight!"
+    echo balls
