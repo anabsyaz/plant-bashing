@@ -18,7 +18,6 @@ else
 fi
 
 echo "In your computer’s world, time moves much faster than in real life."
-echo "For example, 1 minute is equal to 1 day."
 
 read -p "Would you like to wait for your seed to grow? (yes/no): " waitchoice
 
@@ -26,6 +25,25 @@ if [[ "$waitchoice" == "no" ]]; then
     echo "Goodbye!"
     exit
 elif [[ "$waitchoice" == "yes" ]]; then
-    echo "Waiting 60 seconds (1 day)..."
-    sleep 60
-    echo "Your seed has germinated overnight!"
+    echo "Waiting 10 seconds (1 day)..."
+    sleep 10
+
+read -p "Would you like to wait for your seed to grow? (yes/no): " waitchoice.
+
+if [[ "$waitchoice." == "no" ]]; then
+    echo "Goodbye!"
+    exit
+elif [[ "$waitchoice." == "yes" ]]; then
+    echo "Waiting 10 seconds (1 day)..."
+    sleep 10
+
+read -p "Would you like to wait for your seed to grow? (yes/no): " waitchoice..
+
+if [[ "$waitchoice.." == "no" ]]; then
+    echo "Goodbye!"
+    exit
+elif [[ "$waitchoice.." == "yes" ]]; then
+    echo "Waiting 10 seconds (1 day)..."
+    sleep 10
+echo "Your seed has germinated overnight"
+
