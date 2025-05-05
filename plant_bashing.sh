@@ -28,22 +28,40 @@ elif [[ "$waitchoice" == "yes" ]]; then
     echo "Waiting 10 seconds (1 day)..."
     sleep 10
 
-read -p "Would you like to wait for your seed to grow? (yes/no): " waitchoice.
+read -p "Would you like to wait for your seed to grow? (yes/no): " waitchoice
 
-if [[ "$waitchoice." == "no" ]]; then
+if [[ "$waitchoice" == "no" ]]; then
     echo "Goodbye!"
     exit
-elif [[ "$waitchoice." == "yes" ]]; then
+elif [[ "$waitchoice" == "yes" ]]; then
     echo "Waiting 10 seconds (1 day)..."
     sleep 10
 
-read -p "Would you like to wait for your seed to grow? (yes/no): " waitchoice..
+read -p "Would you like to wait for your seed to grow? (yes/no): " waitchoice
 
-if [[ "$waitchoice.." == "no" ]]; then
+if [[ "$waitchoice" == "no" ]]; then
     echo "Goodbye!"
     exit
-elif [[ "$waitchoice.." == "yes" ]]; then
+elif [[ "$waitchoice" == "yes" ]]; then
     echo "Waiting 10 seconds (1 day)..."
     sleep 10
 echo "Your seed has germinated overnight"
 
+read -p "Would you like to wait for your seed to grow? (yes/no): " waitchoice
+
+if [[ "$waitchoice" == "no" ]]; then
+    echo "Goodbye!"
+    exit
+elif [[ "$waitchoice" == "yes" ]]; then
+    echo "Waiting 10 seconds (1 day)..."
+    sleep 10
+
+read -p "Would you like to wait for your seed to grow? (yes/no): " waitchoice
+
+if [[ "$waitchoice" == "no" ]]; then
+    echo "Goodbye!"
+    exit
+elif [[ "$waitchoice" == "yes" ]]; then
+    echo "Waiting 10 seconds (1 day)..."
+    sleep 10
+echo "Your plant has grown into a sapling"
