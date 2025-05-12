@@ -1,7 +1,7 @@
 #!/bin/bash
 height=0
 leaves=0
-day=5
+day=1
 echo "Welcome to THE GAME"
 
 echo "What is your name?"
@@ -30,17 +30,10 @@ if [[ "$waitchoice" == "no" ]]; then
 elif [[ "$waitchoice" == "yes" ]]; then
     echo "Waiting 10 seconds (1 day)..."
     sleep 10
+    ((day++))
+fi
 
-read -p "Would you like to wait for your seed to grow? (yes/no): " waitchoice
-
-if [[ "$waitchoice" == "no" ]]; then
-    echo "Goodbye!"
-    exit
-elif [[ "$waitchoice" == "yes" ]]; then
-    echo "Waiting 10 seconds (1 day)..."
-    sleep 10
-
-read -p "Would you like to wait for your seed to grow? (yes/no): " waitchoice
+read -p "Day $day - Would you like to wait for your seed to grow? (yes/no): " waitchoice
 
 if [[ "$waitchoice" == "no" ]]; then
     echo "Goodbye!"
@@ -48,9 +41,11 @@ if [[ "$waitchoice" == "no" ]]; then
 elif [[ "$waitchoice" == "yes" ]]; then
     echo "Waiting 10 seconds (1 day)..."
     sleep 10
+    ((day++))
+fi
 echo "Your seed has germinated overnight"
 
-read -p "Would you like to wait for your seed to grow? (yes/no): " waitchoice
+read -p "Day $day - Would you like to wait for your seed to grow? (yes/no): " waitchoice
 
 if [[ "$waitchoice" == "no" ]]; then
     echo "Goodbye!"
@@ -58,8 +53,10 @@ if [[ "$waitchoice" == "no" ]]; then
 elif [[ "$waitchoice" == "yes" ]]; then
     echo "Waiting 10 seconds (1 day)..."
     sleep 10
+    ((day++))
+fi
 
-read -p "Would you like to wait for your seed to grow? (yes/no): " waitchoice
+read -p "Day $day - Would you like to wait for your seed to grow? (yes/no): " waitchoice
 
 if [[ "$waitchoice" == "no" ]]; then
     echo "Goodbye!"
@@ -67,8 +64,19 @@ if [[ "$waitchoice" == "no" ]]; then
 elif [[ "$waitchoice" == "yes" ]]; then
     echo "Waiting 10 seconds (1 day)..."
     sleep 10
-echo "Day $day Your plant has grown into a sapling"
+    ((day++))
+fi
 
-height=$((height + 2))
-leaves=$((leaves + 2))
-day=$((day + 1))
+read -p "Day $day - Would you like to wait for your seed to grow? (yes/no): " waitchoice
+
+if [[ "$waitchoice" == "no" ]]; then
+    echo "Goodbye!"
+    exit
+elif [[ "$waitchoice" == "yes" ]]; then
+    echo "Waiting 10 seconds (1 day)..."
+    sleep 10
+    ((day++))
+fi 
+
+echo "Day $day - Your plant has grown into a sapling"
+
