@@ -12,7 +12,7 @@ read -p "Would you like to plant a new seed? (yes/no): " answer
 if [[ "$answer" == "yes" ]]; then
     echo "You dug a hole and planted a small seed the size of an olive."
     sleep 2
-    echo "In your computer’s world, time moves much faster than in real life.
+    echo "In your computer’s world, time moves much faster than in real life."
     
 read -p "Would you like to wait for your seed to grow? (yes/no): " waitchoice
 
@@ -99,6 +99,8 @@ elif [[ "$waitchoice" == "yes" ]]; then
     echo "Waiting 10 seconds (1 day)..."
     sleep 10
     ((day++))
+    ((leaves += 2))
+    ((height += 2))
 fi 
 
 read -p "Day $day - Would you like to wait for your seed to grow? (yes/no): " waitchoice
@@ -110,6 +112,8 @@ elif [[ "$waitchoice" == "yes" ]]; then
     echo "Waiting 10 seconds (1 day)..."
     sleep 10
     ((day++))
+    ((leaves += 2))
+    ((height += 2))
 fi 
 
 read -p "Day $day - Would you like to wait for your seed to grow? (yes/no): " waitchoice
@@ -121,6 +125,8 @@ elif [[ "$waitchoice" == "yes" ]]; then
     echo "Waiting 10 seconds (1 day)..."
     sleep 10
     ((day++))
+    ((leaves += 2))
+    ((height += 2))
 fi 
 
 read -p "Day $day - Would you like to wait for your seed to grow? (yes/no): " waitchoice
@@ -132,6 +138,8 @@ elif [[ "$waitchoice" == "yes" ]]; then
     echo "Waiting 10 seconds (1 day)..."
     sleep 10
     ((day++))
+    ((leaves += 2))
+    ((height += 2))
 fi 
 
 read -p "Day $day - Would you like to wait for your seed to grow? (yes/no): " waitchoice
@@ -143,6 +151,8 @@ elif [[ "$waitchoice" == "yes" ]]; then
     echo "Waiting 10 seconds (1 day)..."
     sleep 10
     ((day++))
+    ((leaves += 2))
+    ((height += 2))
 fi 
 
 read -p "Day $day - Would you like to wait for your seed to grow? (yes/no): " waitchoice
@@ -154,6 +164,8 @@ elif [[ "$waitchoice" == "yes" ]]; then
     echo "Waiting 10 seconds (1 day)..."
     sleep 10
     ((day++))
+    ((leaves += 2))
+    ((height += 2))
 fi
 
 read -p "Day $day - Would you like to wait for your seed to grow? (yes/no): " waitchoice
@@ -165,6 +177,8 @@ elif [[ "$waitchoice" == "yes" ]]; then
     echo "Waiting 10 seconds (1 day)..."
     sleep 10
     ((day++))
+    ((leaves += 2))
+    ((height += 2))
 fi
 
 read -p "Day $day - Would you like to wait for your seed to grow? (yes/no): " waitchoice
@@ -176,6 +190,8 @@ elif [[ "$waitchoice" == "yes" ]]; then
     echo "Waiting 10 seconds (1 day)..."
     sleep 10
     ((day++))
+    ((leaves += 2))
+    ((height += 2))
 fi 
 
 read -p "Day $day - Would you like to wait for your seed to grow? (yes/no): " waitchoice
@@ -187,6 +203,8 @@ elif [[ "$waitchoice" == "yes" ]]; then
     echo "Waiting 10 seconds (1 day)..."
     sleep 10
     ((day++))
+    ((leaves += 2))
+    ((height += 2))
 fi 
 
 read -p "Day $day - Would you like to wait for your seed to grow? (yes/no): " waitchoice
@@ -198,6 +216,8 @@ elif [[ "$waitchoice" == "yes" ]]; then
     echo "Waiting 10 seconds (1 day)..."
     sleep 10
     ((day++))
+    ((leaves += 2))
+    ((height += 2))
 fi 
 
 read -p "Day $day - Would you like to wait for your seed to grow? (yes/no): " waitchoice
@@ -209,6 +229,8 @@ elif [[ "$waitchoice" == "yes" ]]; then
     echo "Waiting 10 seconds (1 day)..."
     sleep 10
     ((day++))
+    ((leaves += 2))
+    ((height += 2))
 fi
 
 read -p "Day $day - Would you like to wait for your seed to grow? (yes/no): " waitchoice
@@ -220,6 +242,8 @@ elif [[ "$waitchoice" == "yes" ]]; then
     echo "Waiting 10 seconds (1 day)..."
     sleep 10
     ((day++))
+    ((leaves += 2))
+    ((height += 2))
 fi
 
 read -p "Day $day - Would you like to wait for your seed to grow? (yes/no): " waitchoice
@@ -231,6 +255,8 @@ elif [[ "$waitchoice" == "yes" ]]; then
     echo "Waiting 10 seconds (1 day)..."
     sleep 10
     ((day++))
+    ((leaves += 2))
+    ((height += 2))
 fi 
 
 read -p "Day $day - Would you like to wait for your seed to grow? (yes/no): " waitchoice
@@ -242,6 +268,8 @@ elif [[ "$waitchoice" == "yes" ]]; then
     echo "Waiting 10 seconds (1 day)..."
     sleep 10
     ((day++))
+    ((leaves += 2))
+    ((height += 2))
 fi 
 
 read -p "Day $day - Would you like to wait for your seed to grow? (yes/no): " waitchoice
@@ -253,6 +281,8 @@ elif [[ "$waitchoice" == "yes" ]]; then
     echo "Waiting 10 seconds (1 day)..."
     sleep 10
     ((day++))
+    ((leaves += 2))
+    ((height += 2))
 fi 
 
 
