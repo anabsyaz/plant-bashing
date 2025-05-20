@@ -2,18 +2,27 @@
 height=0
 leaves=0
 day=1
+play_again=true
+first_time=true
 echo "Welcome to THE GAME"
 
-echo "What is your name?"
-read player_name
-echo "Nice to meet you, $player_name"
+while [ "$play_again" == "true" ]; do
+
+if [ "$first_time" == "true" ]; then
+    echo "Welcome to THE GAME"
+    echo "What is your name?"
+    read player_name
+    echo "Nice to meet you, $player_name"
+else
+    echo "Welcome back, $player_name!"
+fi
 
 read -p "Would you like to plant a new seed? (yes/no): " answer
 if [[ "$answer" == "yes" ]]; then
     echo "You dug a hole and planted a small seed the size of an olive."
     sleep 2
     echo "In your computer’s world, time moves much faster than in real life."
-elif [["$answer" == "no" ]]; then
+elif [[ "$answer" == "no" ]]; then
     echo "Goodbye"
     sleep 3
     exit
@@ -290,3 +299,14 @@ echo "Thank you for playing you playing my game"
 echo "Total age: $day"
 echo "Total leaves: $leaves"
 echo "Final height: $height"
+
+    read -p "Would you like to play again? (yes/no): " replay
+    if [[ "$replay" == "yes" ]]; then
+        play_again=true
+        first_time=false
+    else
+        play_again=false
+        echo "Thank you for playing, $player_name!"
+        sleep 2
+    fi
+done
