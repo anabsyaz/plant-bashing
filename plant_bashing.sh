@@ -13,14 +13,19 @@ if [[ "$answer" == "yes" ]]; then
     echo "You dug a hole and planted a small seed the size of an olive."
     sleep 2
     echo "In your computer’s world, time moves much faster than in real life."
-    
+elif [["$answer" == "no" ]]; then
+    echo "Goodbye"
+    sleep 3
+    exit
+fi
+
 read -p "Would you like to wait for your seed to grow? (yes/no): " waitchoice
 
 if [[ "$waitchoice" == "no" ]]; then
     echo "Goodbye!"
     exit
 elif [[ "$waitchoice" == "yes" ]]; then
-    echo "Waiting 10 seconds (1 day)..."
+    echo "Waiting 5 seconds (1 day)..."
     sleep 5
     ((day++))
 else
@@ -28,13 +33,13 @@ else
     exit
 fi
 sleep 5
-read -p "Day $day - Would you like to wait for your seed to grow? (yes/no): " waitchoice
+read -p "Day $day Would you like to wait for your seed to grow? (yes/no): " waitchoice
 
 if [[ "$waitchoice" == "no" ]]; then
     echo "Goodbye!"
     exit
 elif [[ "$waitchoice" == "yes" ]]; then
-    echo "Waiting 10 seconds (1 day)..."
+    echo "Waiting 5 seconds (1 day)..."
     sleep 5
     ((day++))
 fi
@@ -45,7 +50,7 @@ if [[ "$waitchoice" == "no" ]]; then
     echo "Goodbye!"
     exit
 elif [[ "$waitchoice" == "yes" ]]; then
-    echo "Waiting 10 seconds (1 day)..."
+    echo "Waiting 5 seconds (1 day)..."
     sleep 5
     ((day++))
 fi
@@ -57,7 +62,7 @@ if [[ "$waitchoice" == "no" ]]; then
     echo "Goodbye!"
     exit
 elif [[ "$waitchoice" == "yes" ]]; then
-    echo "Waiting 10 seconds (1 day)..."
+    echo "Waiting 5 seconds (1 day)..."
     sleep 5
     ((day++))
 fi
@@ -68,7 +73,7 @@ if [[ "$waitchoice" == "no" ]]; then
     echo "Goodbye!"
     exit
 elif [[ "$waitchoice" == "yes" ]]; then
-    echo "Waiting 10 seconds (1 day)..."
+    echo "Waiting 5 seconds (1 day)..."
     sleep 5
     ((day++))
 fi
@@ -79,7 +84,7 @@ if [[ "$waitchoice" == "no" ]]; then
     echo "Goodbye!"
     exit
 elif [[ "$waitchoice" == "yes" ]]; then
-    echo "Waiting 10 seconds (1 day)..."
+    echo "Waiting 5 seconds (1 day)..."
     sleep 5
     ((day++))
 fi 
@@ -91,7 +96,7 @@ if [[ "$waitchoice" == "no" ]]; then
     echo "Goodbye!"
     exit
 elif [[ "$waitchoice" == "yes" ]]; then
-    echo "Waiting 10 seconds (1 day)..."
+    echo "Waiting 5 seconds (1 day)..."
     sleep 5
     ((day++))
     ((leaves += 2))
@@ -105,7 +110,7 @@ if [[ "$waitchoice" == "no" ]]; then
     echo "Goodbye!"
     exit
 elif [[ "$waitchoice" == "yes" ]]; then
-    echo "Waiting 10 seconds (1 day)..."
+    echo "Waiting 5 seconds (1 day)..."
     sleep 5
     ((day++))
     ((leaves += 2))
@@ -119,7 +124,7 @@ if [[ "$waitchoice" == "no" ]]; then
     echo "Goodbye!"
     exit
 elif [[ "$waitchoice" == "yes" ]]; then
-    echo "Waiting 10 seconds (1 day)..."
+    echo "Waiting 5 seconds (1 day)..."
     sleep 5
     ((day++))
     ((leaves += 2))
@@ -132,7 +137,7 @@ if [[ "$waitchoice" == "no" ]]; then
     echo "Goodbye!"
     exit
 elif [[ "$waitchoice" == "yes" ]]; then
-    echo "Waiting 10 seconds (1 day)..."
+    echo "Waiting 5 seconds (1 day)..."
     sleep 5
     ((day++))
     ((leaves += 2))
@@ -145,7 +150,7 @@ if [[ "$waitchoice" == "no" ]]; then
     echo "Goodbye!"
     exit
 elif [[ "$waitchoice" == "yes" ]]; then
-    echo "Waiting 10 seconds (1 day)..."
+    echo "Waiting 5 seconds (1 day)..."
     sleep 5
     ((day++))
     ((leaves += 2))
@@ -158,7 +163,7 @@ if [[ "$waitchoice" == "no" ]]; then
     echo "Goodbye!"
     exit
 elif [[ "$waitchoice" == "yes" ]]; then
-    echo "Waiting 10 seconds (1 day)..."
+    echo "Waiting 5 seconds (1 day)..."
     sleep 5
     ((day++))
     ((leaves += 2))
@@ -171,7 +176,7 @@ if [[ "$waitchoice" == "no" ]]; then
     echo "Goodbye!"
     exit
 elif [[ "$waitchoice" == "yes" ]]; then
-    echo "Waiting 10 seconds (1 day)..."
+    echo "Waiting 5 seconds (1 day)..."
     sleep 5
     ((day++))
     ((leaves += 2))
@@ -184,7 +189,7 @@ if [[ "$waitchoice" == "no" ]]; then
     echo "Goodbye!"
     exit
 elif [[ "$waitchoice" == "yes" ]]; then
-    echo "Waiting 10 seconds (1 day)..."
+    echo "Waiting 5 seconds (1 day)..."
     sleep 5
     ((day++))
     ((leaves += 2))
@@ -197,7 +202,7 @@ if [[ "$waitchoice" == "no" ]]; then
     echo "Goodbye!"
     exit
 elif [[ "$waitchoice" == "yes" ]]; then
-    echo "Waiting 10 seconds (1 day)..."
+    echo "Waiting 5 seconds (1 day)..."
     sleep 5
     ((day++))
     ((leaves += 2))
@@ -210,7 +215,7 @@ if [[ "$waitchoice" == "no" ]]; then
     echo "Goodbye!"
     exit
 elif [[ "$waitchoice" == "yes" ]]; then
-    echo "Waiting 10 seconds (1 day)..."
+    echo "Waiting 5 seconds (1 day)..."
     sleep 5
     ((day++))
     ((leaves += 2))
@@ -223,7 +228,7 @@ if [[ "$waitchoice" == "no" ]]; then
     echo "Goodbye!"
     exit
 elif [[ "$waitchoice" == "yes" ]]; then
-    echo "Waiting 10 seconds (1 day)..."
+    echo "Waiting 5 seconds (1 day)..."
     sleep 5
     ((day++))
     ((leaves += 2))
@@ -236,7 +241,7 @@ if [[ "$waitchoice" == "no" ]]; then
     echo "Goodbye!"
     exit
 elif [[ "$waitchoice" == "yes" ]]; then
-    echo "Waiting 10 seconds (1 day)..."
+    echo "Waiting 5 seconds (1 day)..."
     sleep 5
     ((day++))
     ((leaves += 2))
@@ -249,7 +254,7 @@ if [[ "$waitchoice" == "no" ]]; then
     echo "Goodbye!"
     exit
 elif [[ "$waitchoice" == "yes" ]]; then
-    echo "Waiting 10 seconds (1 day)..."
+    echo "Waiting 5 seconds (1 day)..."
     sleep 5
     ((day++))
     ((leaves += 2))
@@ -262,7 +267,7 @@ if [[ "$waitchoice" == "no" ]]; then
     echo "Goodbye!"
     exit
 elif [[ "$waitchoice" == "yes" ]]; then
-    echo "Waiting 10 seconds (1 day)..."
+    echo "Waiting 5 seconds (1 day)..."
     sleep 5
     ((day++))
     ((leaves += 2))
@@ -275,11 +280,13 @@ if [[ "$waitchoice" == "no" ]]; then
     echo "Goodbye!"
     exit
 elif [[ "$waitchoice" == "yes" ]]; then
-    echo "Waiting 10 seconds (1 day)..."
+    echo "Waiting 5 seconds (1 day)..."
     sleep 5
     ((day++))
     ((leaves += 2))
     ((height += 2))
 fi 
-
-
+echo "Thank you for playing you playing my game"
+echo "Total age: $day"
+echo "Total leaves: $leaves"
+echo "Final height: $height"
