@@ -5,6 +5,8 @@ day=1
 play_again=true
 first_time=true
 plant_name="Morpheus"
+default_index=0
+default_names=("Morpheus", "Analiea", "Izzy")
 
 growPlant() {
     ((day++))
