@@ -7,6 +7,7 @@ first_time=true
 plant_name="Morpheus"
 default_index=0
 default_names=("Morpheus" "Analiea" "Izzy")
+weather_conditions=("Rainy" "Sunny" "Cloudy" "Overcast" "Windstorm" "Rainy" "Foggy")
 
 growPlant() {
     ((day++))
@@ -18,6 +19,11 @@ Goodbye() {
     echo "Goodbye"
     sleep 3
     exit
+}
+
+Weather() {
+    random_index=$((RANDOM % ${#weather_conditions[@]}))
+    weather="${weather_conditions[$random_index]}"
 }
 
 while $play_again; do
@@ -131,9 +137,11 @@ while $play_again; do
         echo "Waiting 5 seconds (1 day)..."
         sleep 5
         growPlant
+        Weather
     fi 
     sleep 5
-    echo "Day $day your plant is $height cm tall and has $leaves"
+    echo "Day $day - Weather: $weather"
+    echo "your plant is $height cm tall and has $leaves"
     read -p "Would you like to wait for your seed to grow? (yes/no): " waitchoice
 
     if [[ "$waitchoice" == "no" ]]; then
@@ -142,9 +150,11 @@ while $play_again; do
         echo "Waiting 5 seconds (1 day)..."
         sleep 5
         growPlant
+        Weather
     fi 
     sleep 5
-    echo "Day $day your plant is $height cm tall and has $leaves"
+    echo "Day $day - Weather: $weather"
+    echo "your plant is $height cm tall and has $leaves"
     read -p "Would you like to wait for your seed to grow? (yes/no): " waitchoice
 
     if [[ "$waitchoice" == "no" ]]; then
@@ -153,9 +163,11 @@ while $play_again; do
         echo "Waiting 5 seconds (1 day)..."
         sleep 5
         growPlant
+        Weather
     fi 
     sleep 5
-    echo "Day $day your plant is $height cm tall and has $leaves"
+    echo "Day $day - Weather: $weather"
+    echo "your plant is $height cm tall and has $leaves"
     read -p "Would you like to wait for your seed to grow? (yes/no): " waitchoice
     if [[ "$waitchoice" == "no" ]]; then
         Goodbye
@@ -163,9 +175,11 @@ while $play_again; do
         echo "Waiting 5 seconds (1 day)..."
         sleep 5
         growPlant
+        Weather
     fi 
     sleep 5
-    echo "Day $day your plant is $height cm tall and has $leaves"
+    echo "Day $day - Weather: $weather"
+    echo "your plant is $height cm tall and has $leaves"
     read -p "Would you like to wait for your seed to grow? (yes/no): " waitchoice
     if [[ "$waitchoice" == "no" ]]; then
         Goodbye
@@ -173,9 +187,11 @@ while $play_again; do
         echo "Waiting 5 seconds (1 day)..."
         sleep 5
         growPlant
+        Weather
     fi 
     sleep 5
-    echo "Day $day your plant is $height cm tall and has $leaves"
+    echo "Day $day - Weather: $weather"
+    echo "your plant is $height cm tall and has $leaves"
     read -p "Would you like to wait for your seed to grow? (yes/no): " waitchoice
     if [[ "$waitchoice" == "no" ]]; then
         Goodbye
@@ -183,9 +199,11 @@ while $play_again; do
         echo "Waiting 5 seconds (1 day)..."
         sleep 5
         growPlant
+        Weather
     fi
     sleep 5
-    echo "Day $day your plant is $height cm tall and has $leaves"
+    echo "Day $day - Weather: $weather"
+    echo "your plant is $height cm tall and has $leaves"
     read -p "Would you like to wait for your seed to grow? (yes/no): " waitchoice
     if [[ "$waitchoice" == "no" ]]; then
         Goodbye
@@ -193,9 +211,11 @@ while $play_again; do
         echo "Waiting 5 seconds (1 day)..."
         sleep 5
         growPlant
+        Weather
     fi
     sleep 5
-    echo "Day $day your plant is $height cm tall and has $leaves"
+    echo "Day $day - Weather: $weather"
+    echo "your plant is $height cm tall and has $leaves"
     read -p "Would you like to wait for your seed to grow? (yes/no): " waitchoice
     if [[ "$waitchoice" == "no" ]]; then
         Goodbye
@@ -203,9 +223,11 @@ while $play_again; do
         echo "Waiting 5 seconds (1 day)..."
         sleep 5
         growPlant
+        Weather
     fi 
     sleep 5
-    echo "Day $day your plant is $height cm tall and has $leaves"
+    echo "Day $day - Weather: $weather"
+    echo "your plant is $height cm tall and has $leaves"
     read -p "Would you like to wait for your seed to grow? (yes/no): " waitchoice
     if [[ "$waitchoice" == "no" ]]; then
         Goodbye
@@ -213,9 +235,11 @@ while $play_again; do
         echo "Waiting 5 seconds (1 day)..."
         sleep 5
         growPlant
+        Weather
     fi 
     sleep 5
-    echo "Day $day your plant is $height cm tall and has $leaves"
+    echo "Day $day - Weather: $weather"
+    echo "your plant is $height cm tall and has $leaves"
     read -p "Would you like to wait for your seed to grow? (yes/no): " waitchoice
     if [[ "$waitchoice" == "no" ]]; then
         Goodbye
@@ -223,9 +247,11 @@ while $play_again; do
         echo "Waiting 5 seconds (1 day)..."
         sleep 5
         growPlant
+        Weather
     fi 
     sleep 5
-    echo "Day $day your plant is $height cm tall and has $leaves"
+    echo "Day $day - Weather: $weather"
+    echo "your plant is $height cm tall and has $leaves"
     read -p "Would you like to wait for your seed to grow? (yes/no): " waitchoice
     if [[ "$waitchoice" == "no" ]]; then
         Goodbye
@@ -233,9 +259,11 @@ while $play_again; do
         echo "Waiting 5 seconds (1 day)..."
         sleep 5
         growPlant
+        Weather
     fi
     sleep 5
-    echo "Day $day your plant is $height cm tall and has $leaves"
+    echo "Day $day - Weather: $weather"
+    echo "your plant is $height cm tall and has $leaves"
     read -p "Would you like to wait for your seed to grow? (yes/no): " waitchoice
     if [[ "$waitchoice" == "no" ]]; then
         Goodbye
@@ -243,9 +271,11 @@ while $play_again; do
         echo "Waiting 5 seconds (1 day)..."
         sleep 5
         growPlant
+        Weather
     fi
     sleep 5
-    echo "Day $day your plant is $height cm tall and has $leaves"
+    echo "Day $day - Weather: $weather"
+    echo "your plant is $height cm tall and has $leaves"
     read -p "Would you like to wait for your seed to grow? (yes/no): " waitchoice
     if [[ "$waitchoice" == "no" ]]; then
         Goodbye
@@ -253,9 +283,11 @@ while $play_again; do
         echo "Waiting 5 seconds (1 day)..."
         sleep 5
         growPlant
+        Weather
     fi 
     sleep 5
-    echo "Day $day your plant is $height cm tall and has $leaves"
+    echo "Day $day - Weather: $weather"
+    echo "your plant is $height cm tall and has $leaves"
     read -p "Would you like to wait for your seed to grow? (yes/no): " waitchoice
     if [[ "$waitchoice" == "no" ]]; then
         Goodbye
@@ -263,9 +295,11 @@ while $play_again; do
         echo "Waiting 5 seconds (1 day)..."
         sleep 5
         growPlant
+        Weather
     fi 
     sleep 5
-    echo "Day $day your plant is $height cm tall and has $leaves"
+    echo "Day $day - Weather: $weather"
+    echo "your plant is $height cm tall and has $leaves"
     read -p "Would you like to wait for your seed to grow? (yes/no): " waitchoice
     if [[ "$waitchoice" == "no" ]]; then
         Goodbye
@@ -273,6 +307,7 @@ while $play_again; do
         echo "Waiting 5 seconds (1 day)..."
         sleep 5
         growPlant
+        Weather
     fi 
     echo "Thank you for playing you playing my game"
     echo "Total age: $day"
