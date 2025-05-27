@@ -6,7 +6,7 @@ play_again=true
 first_time=true
 plant_name="Morpheus"
 default_index=0
-default_names=("Morpheus", "Analiea", "Izzy")
+default_names=("Morpheus" "Analiea" "Izzy")
 
 growPlant() {
     ((day++))
@@ -41,10 +41,14 @@ while $play_again; do
         read -p "What would you like to name your plant?: " plant_name
         echo "Your plant will be called $plant_name."
     else
-        plant_name="Morpheus"
+        plant_name="${default_names[$default_name_index]}"
         echo "We'll stick with the name $plant_name."
+        ((default_name_index++))
+        if (( default_name_index >= ${#default_names[@]} )); then
+            default_name_index=0
+        fi
     fi
-
+    
     read -p "Would you like to plant a new seed? (yes/no): " answer
     if [[ "$answer" == "yes" ]]; then
         echo "You dug a hole and planted a small seed the size of an olive."
