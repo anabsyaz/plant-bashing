@@ -58,6 +58,8 @@ preSapling() {
         echo "Waiting 5 seconds (1 day)..."
         sleep 5
         ((day++))
+    else
+        echo "Invalid choice."
     fi
     sleep 5
 }
