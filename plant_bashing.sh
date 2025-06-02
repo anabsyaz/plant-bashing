@@ -20,20 +20,20 @@ growPlant() {
             ;;
         "Sunny")
             ((growth_rate += 3))
-            height=$(echo "$height + 1.5" | bc)
-            leaves=$(echo "$leaves + 2 + (2.5 * $growth_rate)" | bc)
+            height=$(echo "$height + 1.5" | bc -l)
+            leaves=$(echo "$leaves + 2 + (2.5 * $growth_rate)" | bc -l)
             ;;
         "Cloudy")
             ;;
         "Overcast")
-            height=$(echo "$height + 1.5" | bc)
-            leaves=$(echo "$leaves + 2 + (2.5 * $growth_rate)" | bc)
+            height=$(echo "$height + 1.5" | bc -l)
+            leaves=$(echo "$leaves + 2 + (2.5 * $growth_rate)" | bc -l)
             ;;
         "Windstorm")
             ((growth_rate -= 2))
             ((leaves -= 3))
             ((windstorm_count++))
-            if (( leaves < 0 )); then
+            if (( leaves < 0 )| bc -l); then
                 leaves=0
             fi
             ;;
@@ -56,12 +56,12 @@ preSapling() {
         Goodbye
     elif [[ "$waitchoice" == "yes" ]]; then
         echo "Waiting 5 seconds (1 day)..."
-        sleep 5
+        #sleep 5
         ((day++))
     else
         echo "Invalid choice."
     fi
-    sleep 5
+    #sleep 5
 }
 
 Weather() {
@@ -69,6 +69,7 @@ Weather() {
     weather="${weather_conditions[$random_index]}"
 }
 
+#while play again is equal to true then run the code and play the game
 while $play_again; do
 
     if [ "$first_time" == "true" ]; then
