@@ -31,9 +31,9 @@ growPlant() {
             ;;
         "Windstorm")
             ((growth_rate -= 2))
-            ((leaves -= 3))
+            leaves=$(echo "$leaves - 3" | bc -l)
             ((windstorm_count++))
-            if (( leaves < 0 )| bc -l); then
+            if (( $(bc -l <<< "$leaves < 0") )); then
                 leaves=0
             fi
             ;;
@@ -74,7 +74,7 @@ while $play_again; do
 
     if [ "$first_time" == "true" ]; then
         echo "Welcome to THE GAME"
-        echo "What is your name?"
+        echo "What is your name? "
         read player_name
         echo "Nice to meet you, $player_name"
     else
@@ -82,9 +82,9 @@ while $play_again; do
     fi
 
     if [ "$first_time" == "true" ]; then
-        read -p "Do you want to name your plant?" name_choice
+        read -p "Do you want to name your plant? " name_choice
     else
-        read -p "Do you want to change your plant's name?" name_choice
+        read -p "Do you want to change your plant's name? " name_choice
     fi
 
     if [[ "$name_choice" == "yes" ]]; then
@@ -123,6 +123,13 @@ while $play_again; do
     sleep 5
     preSapling
     preSapling
+    if [ "$first_time" == "true" ]; then
+        read -p "Do you want to change the name of your plant? " name_choice
+    fi
+    if [[ "$name_choice" == "yes" ]]; then
+        read -p "What would you like to name your plant?: " plant_name
+        echo "Your plant will be called $plant_name."
+    fi
     echo "Your seed has germinated overnight"
     sleep 3
     preSapling
@@ -135,7 +142,7 @@ while $play_again; do
             Goodbye
         elif [[ "$waitchoice" == "yes" ]]; then
             echo "Waiting 5 seconds (1 day)..."
-            sleep 5
+            #sleep 5
             growPlant
             echo "Day $day - Weather: $weather"
             echo "Growth Rate: $growth_rate"
@@ -146,7 +153,7 @@ while $play_again; do
     done
 
     echo "Thank you for playing you playing my game"
-    echo "Total age: $day"
+    echo "Total age: $day days"
     echo "Total leaves: $leaves"
     echo "Final height: $height"
     echo "Windstorms survived: $windstorm_count"
